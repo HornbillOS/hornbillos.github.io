@@ -4,6 +4,12 @@
 
 
 Who are we?
-Just a person's interest to bring up a OS with LineageOS based ROM with modem and secure apps.
+Just two people's interest to bring up a OS with LineageOS based ROM with modem and secure apps.
+
+Our motto
+---------
+Base on LineageOS, with modern apps and give a proper daily driver rom.
+We put minimal customization to make it the most simple rom.
+
 
  # Status : Working in progress. Do not sync.
