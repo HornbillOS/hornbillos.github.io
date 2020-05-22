@@ -12,4 +12,12 @@ Base on LineageOS, with modern apps and give a proper daily driver rom.
 We put minimal customization to make it the most simple rom.
 
 
- # Status : Working in progress.
+Status : Working in progress.
+-----------------------------
+
+Devices
+-------
+
+- Redmi 6 Pro (sakura)
+- Didn't see your device?Happy if you build one :)
+
