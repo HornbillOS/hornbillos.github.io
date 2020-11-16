@@ -1,87 +1,101 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-    <title>HornbillOS</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Downloads - HornbillOS</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+		<!-- Scripts -->
+        <script src="../assets/js/jquery.min.js"></script>
+        <script src="../assets/js/jquery.scrollex.min.js"></script>
+        <script src="../assets/js/jquery.scrolly.min.js"></script>
+        <script src="../assets/js/browser.min.js"></script>
+        <script src="../assets/js/breakpoints.min.js"></script>
+        <script src="../assets/js/util.js"></script>
+        <script src="../assets/js/main.js"></script>
     <script type="text/javascript">
-      $(document).ready(function() {
-        getData();
-      });
-      var devicedata = [
-          {'name': 'Redmi 6 Pro', 'code': 'sakura', 'image': 'sakura.png', 'url': 'https://sourceforge.net/projects/hornbillos/files/sakura/', 'version' : 'Jackfruit'},
-          {'name': 'Motorola Moto G5 Plus', 'code': 'potter', 'image': 'potter.png', 'url': 'https://sourceforge.net/projects/hornbillos/files/potter/', 'version' : 'Jackfruit'},
-          {'name': 'POCOPHONE F1', 'code': 'beryllium', 'image': 'beryllium.png', 'url': 'https://sourceforge.net/projects/hornbillos/files/beryllium/', 'version' : 'Jackfruit'},
-        ];
-      function getData() {
-        for(i=0;i<devicedata.length;i++) {
-          $('#dlist').append(
-            "<div class=\"col\">"
-            + "<div class=\"card text-black mb-3\">"
-            + "  <img src=\"../assets/" + devicedata[i].image + "\" class=\"card-img-top\" alt=\"...\" style=\"margin-left: auto;margin-right: auto; margin-top: 10px; width: auto; height: 200px;\">"
-            + "  <div class=\"card-body\">"
-            + "    <h4>" + devicedata[i].name + " (" +devicedata[i].code +")</h4>"
-            + "    <h7>Latest Version<p class=\"card-text\">" + devicedata[i].version + "</p></h7>"
-            + "  </div>"
-            + "  <div class=\"card-footer bg-light text-muted\">"
-            + "    <a href=\"" + devicedata[i].url + "\" class=\"btn btn-dark\">Download</a>"
-            + "  </div>"
-            + "</div>"
-            + "</div>");
-        }
-      }
-    </script>
+            $(document).ready(function() {
+              getData();
+            });
+            var devicedata = [
+                {'name': 'Redmi 6 Pro', 'code': 'sakura', 'status': 'Stable', 'url': 'https://sourceforge.net/projects/hornbillos/files/sakura/', 'version' : 'Jackfruit', 'maintainer' : 'Alex'},
+                {'name': 'Motorola Moto G5 Plus', 'code': 'potter', 'status': 'Stable', 'url': 'https://sourceforge.net/projects/hornbillos/files/potter/', 'version' : 'Jackfruit', 'maintainer' : 'nahnah'},
+                {'name': 'POCOPHONE F1', 'code': 'beryllium', 'status': 'Stable', 'url': 'https://sourceforge.net/projects/hornbillos/files/beryllium/', 'version' : 'Jackfruit', 'maintainer' : 'nahnah'},
+              ];
+              function getData() {
+                    for(i=0;i<devicedata.length;i++) {
+                    $('#dlist').append(
+                        "<tr>"
+                        + "<td>" + devicedata[i].name + "</td>"
+                        + "<td>" + devicedata[i].code + "</td>"
+                        + "<td>" + devicedata[i].version + "</td>"
+                        + "<td>" + devicedata[i].status + "</td>"
+                        + "<td>" + "<a href = \" " + devicedata[i].url +" \">Sourceforge</td>"
+                        + "<td>" + devicedata[i].maintainer + "</td>"
+                        +"</tr>");
+                    }
+                }
+          </script>
+	</head>
+	<body class="is-preload">
 
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">      
-      
-      <a class="navbar-brand">HornbillOS |<small class="text-muted"> Download</small></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav text-center">
-              <li class="nav-item ">
-                <a class="nav-link" href="../index.html">Home</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Download <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="gallery.html">Gallery</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="support.html">Support</a>
-              </li>
-              <!-- <li class="nav-item">
-                <a class="nav-link" href="wiki.html">Wiki</a>
-              </li> -->
-            </ul>
-          </div>
-    </nav>
-  <div>
-    <div class="container" style="margin-top: 10px; width: 100%; max-width: 600px; margin-left: auto; margin-right: auto;">
+		<!-- Header -->
+			<header id="header">
+				<a href="../index.html" class="title">HornbillOS</a>
+				<nav>
+					<ul>
+						<li><a href="../index.html">Home</a></li>
+						<li><a href="downloads.html" class="active">Downloads</a></li>
+						<!--<li><a href="elements.html">Elements</a></li>-->
+					</ul>
+				</nav>
+			</header>
 
-      <div><h1 style="margin-left: auto;margin-right: auto; margin: 20px;">Download</h1></div>
-      <div id='dlist'>
-      </div>
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-      
-      
-    </div>
-  </div>
-  
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  </body>
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<!-- Table -->
+                            <section>
+                                <h2>Downloads</h2>
+                                <div class="table-wrapper">
+                                    <table class="alt">
+                                        <thead>
+                                            <tr>
+                                                <th>Device</th>
+                                                <th>Codename</th>
+                                                <th>Version</th>
+                                                <th>Status</th>
+                                                <th>Link</th>
+                                                <th>Maintainer</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody  id='dlist'>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+						</div>
+					</section>
+
+			</div>
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; RSoft. All rights reserved.</li>
+						<li><a href="https://github.com/HornbillOS" class="icon brands fa-github"><span class="label">Facebook</span></a></li>
+						<li><a href="https://t.me/HornbillOS" class="icon brands fa-telegram"><span class="label">GitHub</span></a></li>
+					</ul>
+				</div>
+			</footer>
+	</body>
 </html>
